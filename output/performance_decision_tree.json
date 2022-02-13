@@ -1,0 +1,1 @@
+{"model": "decision_tree", "accuracy": 0.75, "tn": 91, "fp": 40, "fn": 21, "tp": 91, "roc auc": 0.75, "pr auc": 0.65}

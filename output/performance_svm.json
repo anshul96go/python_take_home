@@ -1,0 +1,1 @@
+{"model": "svm", "accuracy": 0.79, "tn": 80, "fp": 22, "fn": 29, "tp": 112, "roc auc": 0.79, "pr auc": 0.78}

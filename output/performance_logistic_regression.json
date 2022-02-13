@@ -1,0 +1,1 @@
+{"model": "logistic_regression", "accuracy": 0.74, "tn": 62, "fp": 8, "fn": 55, "tp": 118, "roc auc": 0.78, "pr auc": 0.87}

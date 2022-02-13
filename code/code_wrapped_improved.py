@@ -255,11 +255,8 @@ class Prediction:
 
         performance_result = {'model':str(self.model_name),'accuracy':round(accuracy,2),'tn':int(tn),'fp':int(fp),'fn':int(fn),'tp':int(tp),'roc auc':round(roc_auc,2),'pr auc':round(pr_auc,2)}
         path = '../output/performance_'+str(self.model_name)+'.json'
-        print(performance_result)
         with open(path, 'w') as fp:
             json.dump(performance_result, fp)
-
-        return {'accuracy':accuracy, 'confusion_matrix':cm, 'roc_auc':roc_auc, 'pr_auc':pr_auc}
 
 
 def run_model(file_path,model): 
@@ -289,7 +286,8 @@ def run_model(file_path,model):
         p.predict()
 
         # get model performance
-        performance = p.performance()    
+        p.performance()    
+
 
 
 def main(data='data_file_path'):
@@ -309,33 +307,3 @@ def main(data='data_file_path'):
     
 if __name__ == '__main__':
     main()
-
-
-def run_model(file_path,model): 
-        # read the data
-        data = pd.read_csv(file_path)
-        X = data[data.columns[:-1]]
-        y = data[data.columns[-1]]
-        
-        # with parameter tuning
-
-        # call class
-        p = Prediction(X,y)
-
-        # data normalization
-        p.data_normalization()
-
-        # feature engineering
-        p.feature_selection()
-
-        # split data into train and test
-        p.data_split()
-
-        # parameter tuning
-        p.parameter_tuning(model=model)
-
-        # make predictions
-        p.predict()
-
-        # get model performance
-        performance = p.performance()    

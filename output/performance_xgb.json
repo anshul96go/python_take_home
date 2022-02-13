@@ -1,0 +1,1 @@
+{"model": "xgb", "accuracy": 0.78, "tn": 82, "fp": 23, "fn": 31, "tp": 107, "roc auc": 0.78, "pr auc": 0.77}
