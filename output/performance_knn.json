@@ -1,0 +1,1 @@
+{"model": "knn", "accuracy": 0.77, "tn": 85, "fp": 32, "fn": 25, "tp": 101, "roc auc": 0.76, "pr auc": 0.71}
